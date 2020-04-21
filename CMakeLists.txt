@@ -1,11 +1,8 @@
-﻿# CMakeList.txt : CMake project for TinyCppTools, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.10)
+project (CppTinyTools VERSION 0.0.1 DESCRIPTION "Simple and tiny cpp tools library for improve programming")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
 
-project ("CppTinyTools")
 
-# Add source to this projectDa's executable.
-add_executable (CppTinyTools "CppTinyTools.cpp" "CppTinyTools.hpp")
+add_subdirectory(src)
+add_subdirectory(tests)
 
-# TODO: Add tests and install targets if needed.
